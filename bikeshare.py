@@ -166,7 +166,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+#This function is added to display raw data in an interactive manner, 5 rows at a time, upon user request.
 def display_raw_data(df):
     """Displays raw data 5 rows at a time in an interactive manner."""
     view_raw_data = input('\nWould you like to see the raw data? Enter yes or no.\n').lower()
