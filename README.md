@@ -1,27 +1,141 @@
->**Note**: Please **fork** this Udacity repository so you have a **remote** repository in **your** GitHub account. Then you can clone the remote repository to your local machine. Later, as a part of the project, you will push your changes to the remote repository in your GitHub account.
+# Bikeshare Data Analysis 🚲
 
+## Overview
 
-# Project Title
+This project is an interactive Python application that allows users to explore bikeshare data for three major U.S. cities:
 
-Describe what your project is about and what it does
+* Chicago
+* New York City
+* Washington
 
-## Information about how to use your project
+Users can filter data by **city**, **month**, and **day of the week**, and the program will compute and display various statistics.
 
-This could include:
+---
 
-- Step-by-step instructions for installing or setting up your project.
-- Any software dependencies that need to be installed.
-- Instructions and examples for how to use your project, including any helpful code snippets.
-- Common issues and troubleshooting tips
+## Features
 
-## Contribution guidelines
+### 🔍 User Input
 
-If you welcome contributions, provide guidelines on how others can contribute to your project.
+* Select a city (Chicago, New York City, Washington)
+* Filter by:
 
-## Credits
+  * Month (January–June or all)
+  * Day of the week (Monday–Sunday or all)
 
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+### 📊 Data Analysis
 
-## Date created
+The program calculates and displays:
 
-Include the date you created this project and README file.
+#### 1. Time Statistics
+
+* Most common month
+* Most common day of the week
+* Most common start hour
+
+#### 2. Station Statistics
+
+* Most commonly used start station
+* Most commonly used end station
+* Most frequent trip (start → end)
+
+#### 3. Trip Duration Statistics
+
+* Total travel time
+* Average travel time
+
+#### 4. User Statistics
+
+* User type counts
+* Gender distribution (if available)
+* Birth year stats:
+
+  * Earliest
+  * Most recent
+  * Most common
+
+### 📄 Raw Data View
+
+* View raw data in chunks of 5 rows
+* Interactive prompt to continue or stop
+
+---
+
+## Project Structure
+
+```
+.
+├── bikeshare.py          # Main Python script
+├── chicago.csv           # Chicago dataset
+├── new_york_city.csv     # NYC dataset
+├── washington.csv        # Washington dataset
+└── README.md             # Project documentation
+```
+
+---
+
+## Requirements
+
+* Python 3.x
+* pandas
+* numpy
+
+Install dependencies using:
+
+```
+pip install pandas numpy
+```
+
+---
+
+## How to Run
+
+1. Clone or download this repository
+2. Make sure all CSV files are in the same directory as the script
+3. Run the program:
+
+```
+python bikeshare.py
+```
+
+4. Follow the prompts in the terminal
+
+---
+
+## Example Usage
+
+```
+Hello! Let's explore some US bikeshare data!
+
+Which city would you like to analyze? chicago
+Which month? march
+Which day? friday
+```
+
+---
+
+## Notes
+
+* Some datasets may not include **Gender** or **Birth Year** columns (e.g., Washington)
+* Input is case-insensitive
+* Invalid inputs are handled with prompts
+
+---
+
+## Possible Improvements
+
+* Add data visualizations (matplotlib / seaborn)
+* Build a web interface (e.g., Streamlit)
+* Export filtered data or results
+* Improve input flexibility (aliases like "NYC")
+
+---
+
+## Author
+
+Varsha Maruti Gavari
+
+---
+
+## License
+
+This project is open source and available under the MIT License.
