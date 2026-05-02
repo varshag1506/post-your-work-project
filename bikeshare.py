@@ -22,7 +22,7 @@ def get_filters():
         if city in CITY_DATA:
             break
         else:
-            print('Invalid input. Please choose from chicago, new york city, or washington.')
+            print('Invalid input!!. Please choose from chicago, new york city, or washington.')
 
     # get user input for month (all, january, february, ... , june)
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
@@ -31,16 +31,16 @@ def get_filters():
         if month in months:
             break
         else:
-            print('Invalid input. Please choose from january, february, march, april, may, june, or all.')
+            print('Invalid input!!. Please choose from january, february, march, april, may, june, or all.')
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
+    dayslist = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
     while True:
         day = input('Which day of week would you like to filter by? (monday, tuesday, wednesday, thursday, friday, saturday, sunday, or all)\n').lower()
-        if day in days:
+        if day in dayslist:
             break
         else:
-            print('Invalid input. Please choose from monday, tuesday, wednesday, thursday, friday, saturday, sunday, or all.')
+            print('Invalid input!!. Please choose from monday, tuesday, wednesday, thursday, friday, saturday, sunday, or all.')
 
     print('-'*40)
     return city, month, day
