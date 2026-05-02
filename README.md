@@ -75,7 +75,7 @@ The program calculates and displays:
 
 ## Requirements
 
-* Python 3.x
+* Python 3.13
 * pandas
 * numpy
 
